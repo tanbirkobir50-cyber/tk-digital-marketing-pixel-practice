@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TK Digital Marketing | Meta Ads Services</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f7f8fa;
+            color: #1f2937;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #6b7280;
+        }
+
+        .cta {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .cta p {
+            margin: 15px auto 25px;
+            max-width: 600px;
+            color: #d1d5db;
+        }
+
+        .form-section {
+            background: white;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 6px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        form button {
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">TK Digital Marketing</div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Grow Your Business With Meta Advertising</h1>
+
+        <p>
+            Data-driven Facebook and Instagram advertising strategies
+            designed to help businesses reach the right audience,
+            generate leads and improve marketing performance.
+        </p>
+
+        <a href="#contact" class="btn">Get Started</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+
+        <h2 class="section-title">Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Meta Ads Management</h3>
+                <p>
+                    Campaign planning, setup and management
+                    for Facebook and Instagram advertising.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Audience Targeting</h3>
+                <p>
+                    Research-based audience targeting to help
+                    businesses reach relevant potential customers.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Performance Analysis</h3>
+                <p>
+                    Analyze campaign data and identify opportunities
+                    for better advertising performance.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="section cta">
+    <div class="container">
+
+        <h2>Ready to Grow Your Business?</h2>
+
+        <p>
+            Let's discuss how Meta advertising can help
+            your business reach more potential customers.
+        </p>
+
+        <a href="#contact" class="btn">Get Started</a>
+
+    </div>
+</section>
+
+<section class="section form-section" id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">Get a Free Consultation</h2>
+
+        <form onsubmit="showMessage(event)">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="business">Business Type</label>
+
+            <select id="business" name="business" required>
+
+                <option value="">Select Business Type</option>
+                <option value="ecommerce">E-commerce</option>
+                <option value="local-business">Local Business</option>
+                <option value="service">Service Business</option>
+                <option value="other">Other</option>
+
+            </select>
+
+            <button type="submit" class="btn">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="container">
+        © 2026 TK Digital Marketing. Practice Project.
+    </div>
+</footer>
+
+<script>
+    function showMessage(event) {
+
+        event.preventDefault();
+
+        alert(
+            "Thank you! Your consultation request has been received."
+        );
+
+    }
+</script>
+
+</body>
+</html>
