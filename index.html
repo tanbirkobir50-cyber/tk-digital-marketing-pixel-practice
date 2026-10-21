@@ -309,6 +309,74 @@ src="https://www.facebook.com/tr?id=1100437349361390&ev=PageView&noscript=1"
 
     }
 </script>
+<!-- Shopify Tracking Practice -->
+<section class="section">
+    <div class="container">
 
+        <h2 class="section-title">Shopify Tracking Practice</h2>
+
+        <div class="card">
+            <h3>Premium Panjabi</h3>
+            <p>Price: ৳1,500</p>
+
+            <button id="viewProductBtn" class="btn">
+                View Product
+            </button>
+
+            <button id="addToCartBtn" class="btn">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    document.getElementById("viewProductBtn").addEventListener("click", function () {
+
+        window.dataLayer.push({
+            event: "view_item",
+
+            ecommerce: {
+                currency: "BDT",
+                value: 1500,
+
+                items: [{
+                    item_id: "PANJABI001",
+                    item_name: "Premium Panjabi",
+                    price: 1500,
+                    quantity: 1
+                }]
+            }
+        });
+
+        console.log("view_item event sent");
+    });
+
+
+    document.getElementById("addToCartBtn").addEventListener("click", function () {
+
+        window.dataLayer.push({
+            event: "add_to_cart",
+
+            ecommerce: {
+                currency: "BDT",
+                value: 1500,
+
+                items: [{
+                    item_id: "PANJABI001",
+                    item_name: "Premium Panjabi",
+                    price: 1500,
+                    quantity: 1
+                }]
+            }
+        });
+
+        console.log("add_to_cart event sent");
+    });
+</script>
+    
 </body>
 </html>
