@@ -332,10 +332,13 @@ src="https://www.facebook.com/tr?id=1100437349361390&ev=PageView&noscript=1"
 </section>
 
 <script>
+    <script>
     window.dataLayer = window.dataLayer || [];
 
+    // View Product → ViewContent
     document.getElementById("viewProductBtn").addEventListener("click", function () {
 
+        // 1. Send ecommerce data to dataLayer
         window.dataLayer.push({
             event: "view_item",
 
@@ -352,12 +355,23 @@ src="https://www.facebook.com/tr?id=1100437349361390&ev=PageView&noscript=1"
             }
         });
 
-        console.log("view_item event sent");
+        // 2. Send ViewContent event to Meta Pixel
+        fbq('track', 'ViewContent', {
+            content_ids: ['PANJABI001'],
+            content_name: 'Premium Panjabi',
+            content_type: 'product',
+            value: 1500,
+            currency: 'BDT'
+        });
+
+        console.log("ViewContent event sent to Meta");
     });
 
 
+    // Add to Cart → AddToCart
     document.getElementById("addToCartBtn").addEventListener("click", function () {
 
+        // 1. Send ecommerce data to dataLayer
         window.dataLayer.push({
             event: "add_to_cart",
 
@@ -374,8 +388,19 @@ src="https://www.facebook.com/tr?id=1100437349361390&ev=PageView&noscript=1"
             }
         });
 
-        console.log("add_to_cart event sent");
+        // 2. Send AddToCart event to Meta Pixel
+        fbq('track', 'AddToCart', {
+            content_ids: ['PANJABI001'],
+            content_name: 'Premium Panjabi',
+            content_type: 'product',
+            value: 1500,
+            currency: 'BDT'
+        });
+
+        console.log("AddToCart event sent to Meta");
     });
+</script>
+    
 </script>
     
 </body>
